@@ -1,0 +1,26 @@
+{
+  "name": "deploy-blue-green-helper-jenkins",
+  "version": "0.0.3",
+  "description": "A utility to deploy-blue-green-helper using jenkins jobs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha test/",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "keywords": [
+    "deploy, jekins"
+  ],
+  "author": "Mateus Freira dos Santso <mateus.freira@gmail.com> (http://www.github.com/mateusfreira)",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "deploy-blue-green-helper": "0.0.1",
+    "jenkins-api": "^0.2.8",
+    "lodash": "^4.6.1"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.6",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4"
+  }
+}
